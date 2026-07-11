@@ -1,0 +1,86 @@
+# =====================================
+# Terraform
+# =====================================
+
+# Directorio de trabajo de Terraform
+.terraform/
+
+# Archivos de estado
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variables sensibles
+*.tfvars
+*.tfvars.json
+
+# Overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Planes de Terraform
+*.tfplan
+*.plan
+
+# Archivo de bloqueo (RECOMENDADO VERSIONAR)
+# Si tu equipo usa la misma versión del provider AWS,
+# elimina la siguiente línea para subir este archivo.
+# .terraform.lock.hcl
+
+# =====================================
+# Variables locales
+# =====================================
+
+terraform.tfvars
+terraform.tfvars.json
+
+# =====================================
+# VS Code
+# =====================================
+
+.vscode/
+
+# =====================================
+# IntelliJ / JetBrains
+# =====================================
+
+.idea/
+
+# =====================================
+# Sistema Operativo
+# =====================================
+
+.DS_Store
+Thumbs.db
+
+# =====================================
+# Logs
+# =====================================
+
+*.log
+
+# =====================================
+# Archivos temporales
+# =====================================
+
+*.tmp
+*.bak
+*.swp
+
+# =====================================
+# AWS
+# =====================================
+
+.aws/
+
+# =====================================
+# Archivos de prueba
+# =====================================
+
+testing/
+test/
