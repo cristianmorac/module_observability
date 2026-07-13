@@ -27,3 +27,25 @@ module "health_eventbridge" {
     Project     = "Observability"
   }
 }
+
+module "chatbot_role" {
+  source = "../../../modules/observability/role"
+  role_name = "observability-chatbot-role"
+  tags = {
+    Environment = "QA"
+    Project     = "Observability"
+  }
+}
+
+module "slack_chatbot" {
+  source = "../../../modules/observability/chatbot"
+  configuration_name = "observability-qa"
+  slack_team_id = "T03MN099YP6"
+  slack_channel_id = "C0BH1REFAPL"
+  iam_role_arn = module.chatbot_role.arn
+  sns_topic_arns = [module.health_sns.arn]
+  tags = {
+    Environment = "QA"
+    Project     = "Observability"
+  }
+}
