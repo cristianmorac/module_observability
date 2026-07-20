@@ -4,5 +4,7 @@ resource "aws_chatbot_slack_channel_configuration" "this" {
   slack_channel_id = var.slack_channel_id
   slack_team_id = var.slack_team_id
 
+  sns_topic_arns = var.sns_topic_arns
+
   tags = var.tags
 }
