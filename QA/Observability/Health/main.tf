@@ -29,7 +29,7 @@ module "health_eventbridge" {
 }
 
 module "chatbot_role" {
-  source = "../../../modules/observability/role"
+  source = "../../../modules/observability/role/Cahtbot"
   role_name = "observability-chatbot-role"
   tags = merge(local.default_tg, {
     Name = "Chatbot_role_Health"
@@ -42,7 +42,7 @@ module "slack_chatbot" {
   configuration_name = "observability-qa"
   slack_team_id = "T03MN099YP6"
   slack_channel_id = "C0BH1REFAPL"
-  iam_role_arn = module.chatbot_role.arn
+  iam_role_arn = module.chatbot_role.role_arn_chatbot
   sns_topic_arns = [module.health_sns.arn]
   tags = merge(local.default_tg, {
     Name = "Chatbot_Health"
