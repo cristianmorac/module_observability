@@ -5,3 +5,7 @@ output "sns_arn" {
 output "sns_name" {
   value = module.health_sns.name
 }
+
+output "chatbot_role" {
+  value = module.chatbot_role.role_arn_chatbot
+}
