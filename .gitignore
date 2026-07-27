@@ -4,6 +4,7 @@
 
 # Directorio de trabajo de Terraform
 .terraform/
+.terraform.lock.hcl
 
 # Archivos de estado
 *.tfstate
